@@ -39,6 +39,10 @@ $(function() {
       });
     });
   }
+  $(document).on('click scroll',function(){
+$('.collapse').collapse('hide');
+})
+
 
   // Mettre un evenement on scroll sur window pour choper le scroll actuelle
 
