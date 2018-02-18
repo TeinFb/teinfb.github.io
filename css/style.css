@@ -13,6 +13,9 @@ body {
 .wait{
   cursor: wait;
 }
+#ffom {
+  list-style: none;
+}
 
  .cell{
    cursor: cell;
