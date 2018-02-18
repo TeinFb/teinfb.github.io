@@ -52,6 +52,8 @@ $('.collapse').collapse('hide');
 })
 
 
+
+
   // Mettre un evenement on scroll sur window pour choper le scroll actuelle
 
   $(window).on('scroll', function(e) {
@@ -63,4 +65,6 @@ $('.collapse').collapse('hide');
       handleProgress();
     }
   });
+
+  
 });
