@@ -6,6 +6,10 @@ $(function() {
     var posLeft = event.pageX - offsetLeft;
     var max = $('#humour').width();
     var newValue = ( posLeft / max ) * 100;
+    var mobValue = Math.floor((Math.random() * 100) + 1);
+
+    // var posLeft = scrollTop() - offsetLeft;
+    // console.log (scrollTop);
     setVal(newValue);
   });
 
