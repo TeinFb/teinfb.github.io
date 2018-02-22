@@ -8,7 +8,6 @@
 	    var posLeft = touch.pageY - offsetLeft;
 	    var max = $(this).height();
 	    var newValue = ( posLeft / max)*100;
-	    var mobValue = Math.floor((Math.random() * 100) + 1);
 
 	  // console.log(newValue);
 	    setVal(newValue);
