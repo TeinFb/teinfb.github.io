@@ -1,14 +1,13 @@
 	$(function() {
 	  var initial = $('#humour').attr('data-value');
 
-	  $('.Bonus').on("touchmove", function(event) {
+	  $('.Test').on("touchmove", function(event) {
 			event.preventDefault();
       var touch = event.originalEvent.touches[0] || event.originalEvent.changedTouches[0];
-	    var offsetTop = $(this).offset().top;
+	    var offsetTop = $('.Bonus').offset().top;
 	    var posLeft = touch.pageY - offsetTop;
 	    var max = $(this).height();
 	    var newValue = 100-(( posLeft / max)*100);
-posLeft
 	  // console.log(newValue);
 	    setVal(newValue);
 	  });
@@ -28,3 +27,4 @@ posLeft
 	    $('#percent-bonus').html(Math.round(rounded) + ' %');
 	  }
 	});
+	// TODO add throttle
