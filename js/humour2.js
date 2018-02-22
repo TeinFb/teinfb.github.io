@@ -1,7 +1,7 @@
 	$(function() {
 	  var initial = $('#humour').attr('data-value');
 
-	  $('.Bonus').on("touchmove", function(event) {
+	  $('.Test').on("touchmove", function(event) {
 			event.preventDefault();
       var touch = event.originalEvent.touches[0] || event.originalEvent.changedTouches[0];
 	    var offsetLeft = $(this).offset().top;
@@ -14,9 +14,9 @@
 	    setVal(newValue);
 	  });
 
-	  $('.Bonus').on("mouseout", function(e) {
-	    setVal(initial);
-	  });
+	  // $('.Bonus').on("mouseout", function(e) {
+	  //   setVal(initial);
+	  // });
 
 	  function setVal(val) {
 	    var rounded = Math.round(val);
