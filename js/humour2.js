@@ -1,21 +1,21 @@
 	$(function() {
 	  var initial = $('#humour').attr('data-value');
 
-	  $('.Test').on("touchmove", function(event) {
+	  $('.Bonus').on("touchmove", function(event) {
 			event.preventDefault();
       var touch = event.originalEvent.touches[0] || event.originalEvent.changedTouches[0];
-	    var offsetLeft = $(this).offset().top;
-	    var posLeft = touch.pageY - offsetLeft;
+	    var offsetTop = $(this).offset().top;
+	    var posLeft = touch.pageY - offsetTop;
 	    var max = $(this).height();
-	    var newValue = ( posLeft / max)*100;
-
+	    var newValue = 100-(( posLeft / max)*100);
+posLeft
 	  // console.log(newValue);
 	    setVal(newValue);
 	  });
 
-	  // $('.Bonus').on("mouseout", function(e) {
-	  //   setVal(initial);
-	  // });
+	  $('.Bonus').on("touchend", function(e) {
+	    setVal(initial);
+	  });
 
 	  function setVal(val) {
 	    var rounded = Math.round(val);
