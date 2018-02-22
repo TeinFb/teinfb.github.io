@@ -10,7 +10,7 @@
 			var test = $('#skill_pro').width('%');
 	    var newValue = 100-( posLeft /  max)*100;
 	  // console.log(test2);
-		console.log(newValue);
+		// console.log(newValue);
 		// console.log(posLeft);
 	    setVal(newValue);
 	  });
