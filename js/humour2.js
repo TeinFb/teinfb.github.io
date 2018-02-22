@@ -1,14 +1,17 @@
 	$(function() {
 	  var initial = $('#humour').attr('data-value');
 
-	  $('.Test').on("touchmove", function(event) {
+	  $('.Bonus').on("touchmove", function(event) {
 			event.preventDefault();
       var touch = event.originalEvent.touches[0] || event.originalEvent.changedTouches[0];
 	    var offsetTop = $('.Bonus').offset().top;
 	    var posLeft = touch.pageY - offsetTop;
 	    var max = $(this).height();
-	    var newValue = 100-(( posLeft / max)*100);
-	  // console.log(newValue);
+			var test = $('#skill_pro').width('%');
+	    var newValue = 100-( posLeft /  max)*100;
+	  // console.log(test2);
+		console.log(newValue);
+		// console.log(posLeft);
 	    setVal(newValue);
 	  });
 
@@ -27,4 +30,6 @@
 	    $('#percent-bonus').html(Math.round(rounded) + ' %');
 	  }
 	});
+
+
 	// TODO add throttle
