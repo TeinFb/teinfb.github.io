@@ -31,14 +31,15 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#JJ">JJFB</a>
+        <a class="hidden-sm hidden-xs navbar-brand page-scroll" href="#JJ"><i class="fa fa-code"></i> FAGOT-BARRALY JEAN-JACQUES</a>
+        <a class="hidden-md hidden-lg hidden-xl navbar-brand page-scroll" href="#JJ"><i class="fa fa-code"></i> FAGOT-BARRALY J.J.</a>
       </div>
       <div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#about">SUI GENERIS</a></li>
-            <li><a href="#skill_pro">COMPÉTENCES</a></li>
-            <li><a href="#xp_pro">EXPÉRIENCES</a></li>
+            <li><a class="page-scroll" href="#about">SUI GENERIS</a></li>
+            <li><a class="page-scroll" href="#skill_pro">COMPÉTENCES</a></li>
+            <li><a class="page-scroll" href="#xp_pro">EXPÉRIENCES</a></li>
           </ul>
         </div>
       </div>
@@ -46,8 +47,7 @@
   </nav>
 
   <!-- end Menu-->
-<!-- TODO parallax background -->
-<!-- TODO fullpage.js https://github.com/alvarotrigo/fullPage.js/#fullpagejs -->
+<div class="fullPage">
   <div id="JJ" class="intro_quote" data-color="#eba861 fullPage">
     <div class="container-fluid" style="display: table;">
       <div class="row text-center" >
@@ -62,7 +62,7 @@
         </div>
         <div class="separator"></div>
         <a href="#about" class="btn btn-circle page-scroll">
-          <i class="fa fa-angle-double-down animated"></i>
+          <h1><i class="fa fa-angle-down animated"></i></h1>
         </a>
       </div>
     </div>
@@ -370,7 +370,7 @@
                       <span class="percent without-span"></span>
                     </div>
                   </div>
-                  <div class="col-50 Test">
+                  <div class="col-50 HumourM">
                     <span class="hidden-sm hidden-xs">Développement <i class="fa fa-code"></i> </span>
                     <span class="hidden-md hidden-lg hidden-xl">Dev <i class="fa fa-code"></i></span>
                     <div class="progress-container">
@@ -540,12 +540,14 @@
         </div>
       </div>
     </div>
+  </div>
     <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
     <script type="text/javascript" src="js/custom.js"></script>
 
     <!-- JS -->
     <script src="./js/bootstrap.min.js"></script>
     <script src="./js/jquery.fullpage.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
 </body>
 
 </html>

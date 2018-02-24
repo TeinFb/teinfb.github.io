@@ -16,6 +16,11 @@
 .animated.infinite {
   animation-iteration-count: infinite;
 }
+.animated.custom {
+  animation-iteration-count: 4;
+  animation-delay: 2s;
+}
+
 
 .animated.hinge {
   animation-duration: 2s;
