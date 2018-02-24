@@ -9,6 +9,23 @@
   ===========================================================================
  parallax background
   fullpage.js https://github.com/alvarotrigo/fullPage.js/#fullpagejs
+
+
+
+  // var objet = {
+  //   prop1: 'value',
+  //   prop2: 1,
+  //   prop3: [0, 1, 2],
+  //   prop0: [{ prop1: 'test', prop2: 'allo' }, {prop1; 'test'}]
+  //   prop4: false,
+  //   prop5: { prop1: 'allo' },
+  //   prop6: function() { console.log('allo') }
+  // }
+  //
+  // objet.prop6();
+
+
+
    ========================================================================== */
 
 
@@ -46,30 +63,35 @@ $(function() {
 
 
   window.sr = ScrollReveal();
+  sr.reveal('.intro_quote', {
+    duration: 1000,
+    origin: 'top',
+    reset: true
+  });
   sr.reveal('.intro', {
     duration: 1000,
-    origin: 'top'
-    // reset: false;
+    origin: 'top',
+    reset: true
   });
   sr.reveal('.skill_pro', {
     duration: 500,
-    origin: 'top'
-    // reset: false;
+    origin: 'top',
+    reset: true
   });
   sr.reveal('.skill_pro-btn', {
     delay: 2000,
     duration: 2000,
-    origin: 'top'
-    // reset: false;
+    origin: 'top',
+    reset: true
   });
   sr.reveal('.xp_pro', {
     duration: 1000,
-    origin: 'top'
-    // reset: false;
+    origin: 'top',
+    reset: true
   });
   sr.reveal('.foo', {
-    container: '.modal-body'
-    // reset: false;
+    container: '.modal-body',
+    reset: true
   });
 
 
@@ -93,9 +115,6 @@ $(function() {
   // console.log(test);
   $('.age').html(age + ' ans');
   // console.log(age); //check age
-
-
-
   /*========================================================================
                   ███╗   ███╗ ██████╗ ██████╗  █████╗ ██╗
                   ████╗ ████║██╔═══██╗██╔══██╗██╔══██╗██║
@@ -110,6 +129,7 @@ $(function() {
   $('.toggle-image').on('click', function() {
     var images = $(this).attr('data-image');
     var arrayImages = images.split(',');
+
     var imagesDiv = "";
 
     $.each(arrayImages, function(index, image) {
