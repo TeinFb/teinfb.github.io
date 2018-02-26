@@ -20,6 +20,9 @@
   animation-iteration-count: 4;
   animation-delay: 2s;
 }
+.animated.custom1 {
+  animation-iteration-count: 2;
+}
 
 
 .animated.hinge {

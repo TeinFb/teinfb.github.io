@@ -53,7 +53,7 @@ body {
 }
 
 #about{
-  text-shadow: 1px 0px rgba(0,0,0,0.5);
+  text-shadow: 1px 2px rgba(0,0,0,0.5);
 }
 
 #skill_pro {
@@ -189,6 +189,9 @@ progress::-moz-progress-bar-value {
   color: #fff;
   font-size: 4em;
   font-weight: 700;
+}
+.intro_quote h2{
+  text-shadow: 1px 2px rgba(0,0,0,0.5);
 }
 
 .intro {

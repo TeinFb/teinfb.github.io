@@ -105,16 +105,76 @@ $(function() {
                            ╚═╝  ╚═╝ ╚═════╝ ╚══════╝
                                Calcul de l'age
  ===========================================================================*/
+ $(function() {
+   var offsetTop = $('#about').offset().top - 90;
+   var launched = false;
+   var limit = $('#about').height() - 90;
+   $(window).scroll();
+   var shouldProgressOnScroll = true;
+   if ($(document).height() <= limit + $(window).height()) {
+     calculAge();
+   }
+   else  {
+     lauched = false;
+   }
+   $(window).on('scroll', function(e) {
+     var windowScrollTop = $(this).scrollTop();
+     // si le window scroll est > a l'offset top de #skill
+     if (windowScrollTop >= offsetTop && !launched) {
+       launched = true;
+       calculAge();
+     }
+
+     function calculAge() {
+       var birthdate = new Date("1991/03/11");
+       var cur = new Date();
+       var diff = cur - birthdate; // This is the difference in milliseconds
+       var age = Math.floor(diff / 31557600000); // Divide by 1000*60*60*24*365.25
+       // console.log(test);
+       $('.age').animateNumber({
+         number: age,
+         'font-size': '25px',
+       }, 2500) + ' ans';
+       launched = true;
+        $('#age2').addClass('animated flash custom1');
+        // $('#age2').css('fonstsize': '25px'));
 
 
+     }
+   })
+ })
 
-  var birthdate = new Date("1991/03/11");
-  var cur = new Date();
-  var diff = cur - birthdate; // This is the difference in milliseconds
-  var age = Math.floor(diff / 31557600000); // Divide by 1000*60*60*24*365.25
-  // console.log(test);
-  $('.age').html(age + ' ans');
-  // console.log(age); //check age
+ //   var offsetTop = $('#about').offset().top - 90;
+ //   var windowScrollTop = $(this).scrollTop();
+ //   var limit = $('#about').height() - 90;
+ //   var launched = false;
+ //   var shouldProgressOnScroll = true;
+ //   if ($(document).height() <= limit + $(window).height()) {
+ //     handleProgress();
+ //   } else {
+ //     lauched = false;
+ //   }
+ //
+ //   function calculAge(){
+ //     var birthdate = new Date("1991/03/11");
+ //     var cur = new Date();
+ //     var diff = cur - birthdate; // This is the difference in milliseconds
+ //     var age = Math.floor(diff / 31557600000); // Divide by 1000*60*60*24*365.25
+ //     // console.log(test);
+ //     $('.age').animateNumber({
+ //       number: age
+ //     }, 2500) + ' ans';
+ //     launched = true;
+ //   }
+ //    $(window).on('scroll', function(e){
+ //      if (windowScrollTop >= offsetTop && !launched){
+ //        calculAge();
+ //      }
+ //      else {
+ //        launched = false;
+ //      }
+ //
+ // })
   /*========================================================================
                   ███╗   ███╗ ██████╗ ██████╗  █████╗ ██╗
                   ████╗ ████║██╔═══██╗██╔══██╗██╔══██╗██║
@@ -186,45 +246,42 @@ $(function() {
         ╚═╝     ╚═╝  ╚═╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝
                 Animation ProgressBar et attribution valeur
    ========================================================================*/
+// Reccuperer l'offset top de $('#Skill')
+var offsetTop = $('#skill_pro').offset().top - 90;
+var lauched = false;
+var limit = $('#skill_pro').height() - 90;
+$(window).scroll();
+var shouldProgressOnScroll = true;
+if ($(document).height() <= limit + $(window).height()) {
+  handleProgress();
+} else {
+  lauched = false;
+}
 
-
-  // Reccuperer l'offset top de $('#Skill')
-  var offsetTop = $('#skill_pro').offset().top - 90;
-  var lauched = false;
-  var limit = $('#skill_pro').height() - 90;
-  $(window).scroll();
-  var shouldProgressOnScroll = true;
-  if ($(document).height() <= limit + $(window).height()) {
-    handleProgress();
-  } else {
-    lauched = false;
-  }
-
-  function handleProgress() {
-    $('progress').each(function() {
-      var max = $(this).attr('data-value');
-      $(this).val(0).animate({
-        value: max
-      }, {
-        duration: 1500,
-        progress: function() {
-          var value = $(this)[0].value;
-          var spanpercent = $(this).parent().find('.percent');
-          spanpercent.html(Math.round(value) + ' %');
-          $('#humour').addClass('animated shake custom');
-        },
-      });
+function handleProgress() {
+  $('progress').each(function() {
+    var max = $(this).attr('data-value');
+    $(this).val(0).animate({
+      value: max
+    }, {
+      duration: 1500,
+      progress: function() {
+        var value = $(this)[0].value;
+        var spanpercent = $(this).parent().find('.percent');
+        spanpercent.html(Math.round(value) + ' %');
+        $('#humour').addClass('animated shake custom');
+      },
     });
-  }
-  $(window).on('scroll', function(e) {
-    var windowScrollTop = $(this).scrollTop();
-    // si le window scroll est > a l'offset top de #skill
-    if (windowScrollTop >= offsetTop && !lauched) {
-      lauched = true;
-      handleProgress();
-    }
   });
-
+}
+$(window).on('scroll', function(e) {
+  var windowScrollTop = $(this).scrollTop();
+  // si le window scroll est > a l'offset top de #skill
+  if (windowScrollTop >= offsetTop && !lauched) {
+    lauched = true;
+    handleProgress();
+  }
+});
 
   /*=========================================================================
            ██╗  ██╗██╗   ██╗███╗   ███╗ ██████╗ ██╗   ██╗██████╗
