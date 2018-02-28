@@ -74,7 +74,7 @@ $(function() {
     reset: true
   });
   sr.reveal('.skill_pro', {
-    duration: 500,
+    duration: 1000,
     origin: 'top',
     reset: true
   });
