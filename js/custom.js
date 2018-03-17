@@ -12,17 +12,17 @@
 
 
 
-  // var objet = {
-  //   prop1: 'value',
-  //   prop2: 1,
-  //   prop3: [0, 1, 2],
-  //   prop0: [{ prop1: 'test', prop2: 'allo' }, {prop1; 'test'}]
-  //   prop4: false,
-  //   prop5: { prop1: 'allo' },
-  //   prop6: function() { console.log('allo') }
-  // }
-  //
-  // objet.prop6();
+  var objet = {
+    prop1: 'value',
+    prop2: 1,
+    prop3: [0, 1, 2],
+    prop0: [{ prop1: 'test', prop2: 'allo' }, {prop1; 'test'}]
+    prop4: false,
+    prop5: { prop1: 'allo' },
+    prop6: function() { console.log('allo') }
+  }
+
+  objet.prop6();
 
 
 
@@ -38,8 +38,6 @@
                           ╚═╝    ╚═╝  ╚═══╝    ╚═╝       ╚═╝
                             Init functions (?)
     ========================================================================= */
-
-
 
 
 $(function() {
@@ -133,7 +131,6 @@ $(function() {
        // console.log(test);
        $('.age').animateNumber({
          number: age,
-         'font-size': '25px',
        }, 2500) + ' ans';
        launched = true;
         $('#age2').addClass('animated flash custom1');
@@ -303,7 +300,7 @@ $(window).on('scroll', function(e) {
     var newValue = (posLeft / max) * 100;
 
 
-
+// console.log(posLeft);
     // var posLeft = scrollTop() - offsetLeft;
     // console.log (scrollTop);
     setVal(newValue);
@@ -348,7 +345,7 @@ $(window).on('scroll', function(e) {
     var max = $(this).height();
     // var test = $('#skill_pro').width('%');
     var newValue = 100 - (posLeft / max) * 100;
-    // console.log(test);
+    console.log(test);
     // console.log(newValue);
     // console.log(posLeft);
     setVal(newValue);
