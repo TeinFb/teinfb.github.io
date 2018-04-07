@@ -343,9 +343,9 @@ $(window).on('scroll', function(e) {
     var offsetTop = $('.Bonus').offset().top;
     var posLeft = touch.pageY - offsetTop;
     var max = $(this).height();
-    // var test = $('#skill_pro').width('%');
+     //var test = $('#skill_pro').width('%');
     var newValue = 100 - (posLeft / max) * 100;
-    console.log(test);
+    //console.log(test);
     // console.log(newValue);
     // console.log(posLeft);
     setVal(newValue);
